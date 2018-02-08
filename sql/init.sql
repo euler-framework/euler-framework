@@ -3,22 +3,22 @@
 -- ------------------------------------
 
 -- 用户表
-CREATE TABLE sys_user
+CREATE TABLE SYS_USER
     (
-        id VARCHAR(36) NOT NULL,
-        username VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NULL,
-        mobile VARCHAR(255) NULL,
-        password VARCHAR(255) NOT NULL,
-        account_non_expired BIT NOT NULL,
-        account_non_locked BIT NOT NULL,
-        credentials_non_expired BIT NOT NULL,
-        enabled BIT NOT NULL,
-        root BIT NULL,
-        PRIMARY KEY (id),
-        CONSTRAINT UK_SYS_USER_USERNAME UNIQUE (username),
-        CONSTRAINT UK_SYS_USER_EMAIL UNIQUE (email),
-        CONSTRAINT UK_SYS_USER_MOBILE UNIQUE (mobile)
+        ID VARCHAR(36) NOT NULL,
+        USERNAME VARCHAR(255) NOT NULL,
+        EMAIL VARCHAR(255) NULL,
+        MOBILE VARCHAR(255) NULL,
+        PASSWORD VARCHAR(255) NOT NULL,
+        ACCOUNT_NON_EXPIRED bit NOT NULL,
+        ACCOUNT_NON_LOCKED bit NOT NULL,
+        CREDENTIALS_NON_EXPIRED bit NOT NULL,
+        ENABLED bit NOT NULL,
+        ROOT bit NULL,
+        PRIMARY KEY (ID),
+        CONSTRAINT UK_SYS_USER_USERNAME UNIQUE (USERNAME),
+        CONSTRAINT UK_SYS_USER_EMAIL UNIQUE (EMAIL),
+        CONSTRAINT UK_SYS_USER_MOBILE UNIQUE (MOBILE)
     )
     ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
