@@ -10,15 +10,15 @@ CREATE TABLE sys_user
         email VARCHAR(255) NULL,
         mobile VARCHAR(255) NULL,
         password VARCHAR(255) NOT NULL,
-        ACCOUNT_NON_EXPIRED bit NOT NULL,
-        ACCOUNT_NON_LOCKED bit NOT NULL,
-        CREDENTIALS_NON_EXPIRED bit NOT NULL,
-        ENABLED bit NOT NULL,
-        ROOT bit NULL,
-        PRIMARY KEY (ID),
-        CONSTRAINT UK_SYS_USER_USERNAME UNIQUE (USERNAME),
-        CONSTRAINT UK_SYS_USER_EMAIL UNIQUE (EMAIL),
-        CONSTRAINT UK_SYS_USER_MOBILE UNIQUE (MOBILE)
+        account_non_expired BIT NOT NULL,
+        account_non_locked BIT NOT NULL,
+        credentials_non_expired BIT NOT NULL,
+        enabled BIT NOT NULL,
+        root BIT NULL,
+        PRIMARY KEY (id),
+        CONSTRAINT UK_SYS_USER_USERNAME UNIQUE (username),
+        CONSTRAINT UK_SYS_USER_EMAIL UNIQUE (email),
+        CONSTRAINT UK_SYS_USER_MOBILE UNIQUE (mobile)
     )
     ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

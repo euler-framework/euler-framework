@@ -6,14 +6,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "SYS_USER")
+@Table(name = "sys_user")
 public class User {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "id")
     private String id;
 
-    @Column(name = "USERNAME")
+    @Column(name = "username")
     private String username;
 
     public String getUsername() {
